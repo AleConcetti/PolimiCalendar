@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+	<head>
+		<title>Orario delle lezioni</title>		
+		
+
+
+ 
+
+
+
+
+<link rel="stylesheet" href="https://webcommons.polimi.it/webcommons/assets/ateneo2014.css.jsp?v=5&lang=it" type="text/css" />
+<link rel="stylesheet" href="https://webcommons.polimi.it/webcommons/ajax/libs/jqueryui/1.12.1/themes/polij.css.jsp?v=5&lang=it" type="text/css" />
+<link rel="stylesheet" href="https://webcommons.polimi.it/webcommons/assets/desktop.css.jsp?v=5&lang=it" type="text/css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="/oralez/assets/css/base.css?__load_ts=1539799679502" />
+<link rel="stylesheet" type="text/css" href="/oralez/assets/css/desktop.css?__load_ts=1539799679502" />
+ 
+<link media="print" rel="stylesheet" type="text/css" href="/oralez/assets/css/table-IE-print.css?__load_ts=1539799679502">
+<link media="screen" rel="stylesheet" type="text/css" href="/oralez/assets/css/table-IE.css?__load_ts=1539799679502">
+ 
+
+ 
+<script src="https://webcommons.polimi.it/webcommons/ajax/libs/jqueryui/1.12.1/ui.js.jsp?v=5&lang=it" type="text/javascript"></script>
+<script src="https://webcommons.polimi.it/webcommons/ajax/libs/desktop.js.jsp?v=5&lang=it" type="text/javascript"></script>
+ 
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#loading').remove();
+	});
+</script>
+
+
+	</head>
+	<body>
+		<div id="jafBodyContainer">
+			<div id="polijPageHeader">
+				
+
+
+
+
+<table id="poliheader" >
+	<tr>
+		<td class="jaf-text-align-left td-logo-polimi" >
+			<a title="polimi.it" href="http://www.polimi.it">
+				<img class="logo-polimi" alt="logo-polimi" src="https://webcommons.polimi.it/webcommons/assets/logo_polimi_testo.png" />
+			</a>
+			<div id="loading">
+				<strong>La pagina &egrave; in caricamento...</strong><div class="jaf-loading-bar thin" style="max-width: 200px;"></div>
+			</div>
+		</td>
+		<td class="jaf-text-align-center info-DB" >
+			
+        </td>
+        <td class="jaf-text-align-right info-utente" >
+            ALESSANDRO CONCETTI  914267 <a href='/oralez/oralez/controller/MainDesktop.do?evn_jaf_logout=evento&jaf_currentWFID=main&polij_step=0&__pj0=0&__pj1=195bfe4b3ec6361ceb46a669503b8b47' class='Link link-LogOut'>Logout</a><br/>
+<span class='utente-descrizione'>(Studente)</span>
+        </td>
+	</tr>
+</table>
+
+
+
+	
+
+<div id="policontext">
+	<nav class='nomeApp policontext-link' style="float: left; margin: auto 1em;" >
+		<a href='/oralez/oralez/controller/MainDesktop.do?evn_uscita=evento&freezecount=true&jaf_currentWFID=main&polij_step=0&__pj0=0&__pj1=a2e6b87199904b6e4e62234922b5bcf9'><span class="glyphicon goBackIcon" aria-hidden="true"></span>Servizi online</a>  &gt;  Orario delle lezioni
+	</nav>
+	<div class="policontext-link">
+		<nav>
+			
+				
+
+
+
+
+
+
+
+			
+		</nav>
+	</div>
+	<div class="jaf-float-clear" ></div>
+</div>
+			</div>	
+					
+			<div id="polij_msg">
+				
+			</div>
+			
+			<table style="border-spacing: 0;border-collapse: collapse;" class="TablePage">
+<tr class="TrPage">
+<script type='text/javascript'>var jaf_js_LANG = 'IT';</script>
+<td style="width:15%;" class="LeftBar">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<TABLE class="TableCommand"  style='border-spacing:0; border-collapse:collapse;'><TR><TH class="HeadCommand">Funzioni disponibili</TH></TR>
+
+		
+			
+				
+				
+			<tr><td class="BodyFunction"><a id="print1" href="#" title="Stampa orario testuale" class="linkFunction"><ul class="fa-ul" style="margin-top: 0; margin-bottom: 0"> <li><i class="fa-li fa fa-print"></i>Stampa orario testuale</li></ul></a></td></tr>
+			
+			 
+				
+				
+			<tr><td class="BodyFunction"><a id="print2" href="#" title="Stampa orario sinottico" class="linkFunction"><ul class="fa-ul" style="margin-top: 0; margin-bottom: 0"> <li><i class="fa-li fa fa-print"></i>Stampa orario sinottico</li></ul></a></td></tr>
+		
+			
+		
+</TABLE>
+
+
+<br>
+
+<form action="/oralez/oralez/controller/MainDesktop.do?jaf_currentWFID=main&polij_step=0&__pj0=0&__pj1=e4c60a36b8906c8fc8e387cc23c5405a" method="post">
+<table style="border-spacing: 0;border-collapse: collapse;" class="BodyInfoCard">
+<tr>
+
+<td class="TitleInfoCard">Selezionare il semestre</td>
+</TR>
+</TABLE>
+<TABLE  class="BoxInfoCard" style='border-spacing: 0;border-collapse: collapse;'>
+
+	<tr>
+		<td colspan="1" rowspan="1" style="width: 100%" class="ElementInfoCard2 jaf-card-element">
+			<select id="changeSemestre" name="semestre">
+				<option value="1" selected="selected">1° Semestre 2018/2019</option>
+				<option value="2" >2° Semestre 2018/2019</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="1" rowspan="1" style="width: 100%" class="ElementInfoCard2 jaf-card-element">
+			<input id="sbmtChangeSemestre" type="submit" name="evn_default" value="Cambia semestre"> 
+		</td>
+	</tr>
+</TABLE>
+
+
+	
+		<input type="hidden" name="tab_selected" value="2">
+	
+	
+	
+		<input type="hidden" name="lang" value="IT"/>
+	
+
+</form>
+
+	
+
+<br/>
+
+<table style="border-spacing: 0;border-collapse: collapse;" class="BodyInfoCard">
+<tr>
+
+<td class="TitleInfoCard">Help</td>
+</TR>
+</TABLE>
+<TABLE  class="BoxInfoCard" style='border-spacing: 0;border-collapse: collapse;'>
+
+	<tr>
+		<td colspan="1" rowspan="1" class="ElementInfoCard2 jaf-card-element">
+			La funzione di stampa dell'orario utilizza le impostazioni di pagina  (<i>File</i> &rarr; <i>Imposta pagina</i>)  definite nel browser (ad esempio l'orientamento della pagina, intestazione/piè di pagina). <br> Per stampare  il colore di sfondo della griglia dell'orario, assicurarsi di aver abilitato la stampa del colore di sfondo della pagina:
+<ul>
+	<li> In <b>firefox</b> attivare l'opzione presente in <i>File</i> &rarr; <i>Imposta pagina</i> &rarr; <i>Stampa lo sfondo (immagini e colori)</i><br>
+          </li>
+<li> In <b>explorer</b> attivare l'opzione presente in <i>Strumenti</i> &rarr; <i>Opzioni Internet</i> &rarr; <i>Avanzate</i> &rarr; <i>Stampa colori e immagini di sfondo</i>
+</li>
+</ul>
+		</td>	
+	</tr>
+</TABLE>
+
+
+</td><td style="width:85%;" class="CenterBar">
+					<div id="polij_body">				
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<TABLE  class="BoxInfoCard" style='border-spacing: 0;border-collapse: collapse;'>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 20%" class="ElementInfoCard1 jaf-card-element">
+					Corsi di Studi 
+				</td>
+				<td colspan="1" rowspan="1" style="width: 80%" class="ElementInfoCard2 jaf-card-element">
+					Ing Ind - Inf (Mag.)(ord. 270) - MI (481) COMPUTER SCIENCE AND ENGINEERING - INGEGNERIA INFORMATICA
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 20%" class="ElementInfoCard1 jaf-card-element">
+					Stato del piano
+				</td>
+				<td colspan="1" rowspan="1" style="width: 80%" class="ElementInfoCard2 jaf-card-element">
+					
+						Piano in attesa di approvazione
+					
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 20%" class="ElementInfoCard1 jaf-card-element">
+					Anno accademico presentazione
+				</td>
+				<td colspan="1" rowspan="1" style="width: 80%" class="ElementInfoCard2 jaf-card-element">
+					2018/2019
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 20%" class="ElementInfoCard1 jaf-card-element">
+					Piano valido per l'anno accademico
+				</td>
+				<td colspan="1" rowspan="1" style="width: 80%" class="ElementInfoCard2 jaf-card-element">
+					--
+				</td>
+			</tr>
+  		</TABLE>
+
+  		
+  		<br>
+
+	
+	
+		<TABLE  class="BoxInfoCard" style='border-spacing: 0;border-collapse: collapse;'>
+
+			<tr>
+				<td colspan="1" rowspan="1" class="ElementInfoCard2 evidenzia jaf-card-element"><b>ATTENZIONE</b>: 
+<ul style="margin-bottom: 0px">
+   <li> per tutti i corsi di ingegneria (escluso Ingegneria Edile-Architettura), la data effettiva di inizio dei <b>laboratori</b> verrà comunicata in aula dai docenti. Le date di inizio pubblicate nell'orario personalizzato sono puramente indicative.</li>
+   <li>le aule contrassegnate con le sigle <b>LB</b>, <b>DP</b> e <b>LABOR</b> sono fittizie ed indicano ore di laboratorio. I docenti comunicheranno data di inizio e reale sede durante le ore di lezione.</li>
+   <li>L'orario delle lezioni del secondo semestre della Scuola di Architettura e Società è provvisorio e potrà subire delle variazioni. Si pregano i docenti e gli studenti di verificare prima dell'inizio del semestre l'aula e il giorno della lezione. Grazie</li>
+</ul></td>
+			</tr>
+		</TABLE>
+
+	
+		<br>
+		
+		
+			
+								
+		<div id="tab6403" class="tabs polij_tabs" >
+<ul><li><span id='testuale-help'> </span><a href='#testuale' >Orario testuale</a></li><li><span id='sinottico-help'> </span><a href='#sinottico' >Orario sinottico</a></li></ul><div id="testuale">				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="orarioTestuale">	
+
+	<div class="solo_stampa">
+		<TABLE  class="BoxInfoCard" style='border-spacing: 0;border-collapse: collapse;'>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 100%" class="ElementInfoCard2 jaf-card-element">
+					<font style="font-weight: bold;">Orario del 1° Semestre  2018/2019</font>
+				</td>
+			</tr>
+		</TABLE>
+
+		<br>
+	</div>
+	
+	
+			
+			
+			
+
+
+
+
+
+
+
+
+			
+
+			
+	<div style="background-color:#f3f3ee; width: 100%; padding:2px;"><b>080931 - ALGEBRA AND MATHEMATICAL LOGIC</b>
+		
+			&nbsp;(<b>Docente: </b>
+				
+					
+				
+				Mauri Luca
+		 )
+		
+	</div>
+	<b>Semestre:</b> 1  
+	 
+		<b>Inizio lezioni: </b> 19/09/2018 
+		<b>Fine lezioni: </b>  21/12/2018	
+			
+		   
+		   	<ul style="margin-top: 0px; margin-bottom: 0px; list-style-type: square; padding-top: 0px; margin-left: 45px; padding-left: 45px;"><li style="margin-top:5px;">Mercoledì dalle 15:15 alle 18:15, lezione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=1222&lang=IT">B.5.3</a> (Milano Città Studi - Via Bonardi - Edificio 14 - Piano Quinto)</li><li style="margin-top:5px;">Venerdì dalle 15:15 alle 18:15, lezione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=1222&lang=IT">B.5.3</a> (Milano Città Studi - Via Bonardi - Edificio 14 - Piano Quinto)</li></ul>
+	  
+	
+
+			
+			
+				<br><br>
+			
+		
+		
+			
+			
+			
+
+
+
+
+
+
+
+
+			
+
+			
+	<div style="background-color:#f3f3ee; width: 100%; padding:2px;"><b>089169 - AUTONOMOUS AGENTS AND MULTIAGENT SYSTEMS</b>
+		
+			&nbsp;(<b>Docente: </b>
+				
+					
+				
+				Amigoni Francesco
+		 )
+		
+	</div>
+	<b>Semestre:</b> 1  
+	 
+		<b>Inizio lezioni: </b> 18/09/2018 
+		<b>Fine lezioni: </b>  21/12/2018	
+			
+		   
+		   	<ul style="margin-top: 0px; margin-bottom: 0px; list-style-type: square; padding-top: 0px; margin-left: 45px; padding-left: 45px;"><li style="margin-top:5px;">Martedì dalle 08:15 alle 10:15, lezione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=33&lang=IT">N.0.2</a> (Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 2 - Piano Primo)</li><li style="margin-top:5px;">Venerdì dalle 11:15 alle 13:15, lezione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=27&lang=IT">F.0.1</a> (Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 8 - Piano Terra)</li></ul>
+	  
+	
+
+			
+			
+				<br><br>
+			
+		
+		
+			
+			
+			
+
+
+
+
+
+
+
+
+			
+
+			
+	<div style="background-color:#f3f3ee; width: 100%; padding:2px;"><b>099993 - IMAGE ANALYSIS AND COMPUTER VISION</b>
+		
+			&nbsp;(<b>Docente: </b>
+				
+					
+				
+				Caglioti Vincenzo
+		 )
+		
+	</div>
+	<b>Semestre:</b> 1  
+	 
+		<b>Inizio lezioni: </b> 17/09/2018 
+		<b>Fine lezioni: </b>  18/12/2018	
+			
+		   
+		   	<ul style="margin-top: 0px; margin-bottom: 0px; list-style-type: square; padding-top: 0px; margin-left: 45px; padding-left: 45px;"><li style="margin-top:5px;">Lunedì dalle 08:15 alle 10:15, lezione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=7&lang=IT">9.0.1 (EX C.G.1)</a> (Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 9 - Piano Terra)</li><li style="margin-top:5px;">Martedì dalle 12:15 alle 14:15, lezione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=45&lang=IT">S.1.3</a> (Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 3 - Piano Primo)</li></ul>
+	  
+	
+
+			
+			
+				<br><br>
+			
+		
+		
+			
+			
+			
+
+
+
+
+
+
+
+
+			
+
+			
+	<div style="background-color:#f3f3ee; width: 100%; padding:2px;"><b>090014 - INGEGNERIA DEL SOFTWARE B</b>
+		
+			&nbsp;(<b>Docente: </b>
+				
+					
+				
+				San Pietro Pierluigi
+		 )
+		
+	</div>
+	<b>Semestre:</b> 1  
+	 
+		<b>Inizio lezioni: </b> 17/09/2018 
+		<b>Fine lezioni: </b>  20/12/2018	
+			
+		   
+		   	<ul style="margin-top: 0px; margin-bottom: 0px; list-style-type: square; padding-top: 0px; margin-left: 45px; padding-left: 45px;"><li style="margin-top:5px;">Lunedì dalle 12:15 alle 14:15, lezione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=35&lang=IT">N.1.2</a> (Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 2 - Piano Primo)</li><li style="margin-top:5px;">Martedì dalle 15:15 alle 18:15, esercitazione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=943&lang=IT">D.0.3</a> (Milano Città Studi - Via Golgi 40 - Edificio 25 - Piano Seminterrato)</li><li style="margin-top:5px;">Giovedì dalle 08:15 alle 10:15, lezione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=946&lang=IT">D.1.2</a> (Milano Città Studi - Via Golgi 40 - Edificio 25 - Piano Terra)</li></ul>
+	  
+	
+
+			
+			
+				<br><br>
+			
+		
+		
+			
+			
+			
+
+
+
+
+
+
+
+
+			
+
+			
+	<div style="background-color:#f3f3ee; width: 100%; padding:2px;"><b>052536 - SOFT COMPUTING</b>
+		
+			&nbsp;(<b>Docente: </b>
+				
+					
+				
+				Bonarini Andrea
+		 )
+		
+	</div>
+	<b>Semestre:</b> 1  
+	 
+		<b>Inizio lezioni: </b> 17/09/2018 
+		<b>Fine lezioni: </b>  20/12/2018	
+			
+		   
+		   	<ul style="margin-top: 0px; margin-bottom: 0px; list-style-type: square; padding-top: 0px; margin-left: 45px; padding-left: 45px;"><li style="margin-top:5px;">Lunedì dalle 15:15 alle 17:15, lezione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=7&lang=IT">9.0.1 (EX C.G.1)</a> (Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 9 - Piano Terra)</li><li style="margin-top:5px;">Giovedì dalle 14:15 alle 16:15, lezione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=32&lang=IT">N.0.1</a> (Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 2 - Piano Terra)</li></ul>
+	  
+	
+
+			
+			
+				<br><br>
+			
+		
+		
+			
+			
+			
+
+
+
+
+
+
+
+
+			
+
+			
+	<div style="background-color:#f3f3ee; width: 100%; padding:2px;"><b>052294 - ARCHITETTURA DEI CALCOLATORI E SISTEMI OPERATIVI MODULO 2</b>
+		
+			&nbsp;(<b>Docente: </b>
+				
+					
+				
+				Breveglieri Luca Oddone
+		 )
+		
+	</div>
+	<b>Semestre:</b> 1  
+	 
+		<b>Inizio lezioni: </b> 17/09/2018 
+		<b>Fine lezioni: </b>  21/12/2018	
+			
+		   
+		   	<ul style="margin-top: 0px; margin-bottom: 0px; list-style-type: square; padding-top: 0px; margin-left: 45px; padding-left: 45px;"><li style="margin-top:5px;">Lunedì dalle 14:15 alle 17:15, lezione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=4739&lang=IT">5.03</a> (Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 5 - Piano Terra)</li><li style="margin-top:5px;">Mercoledì dalle 08:15 alle 11:15, lezione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=4606&lang=IT">L.26.16</a> (Milano Città Studi - Via Golgi 20 - Edificio 26 - Piano Primo)</li><li style="margin-top:5px;">Venerdì dalle 08:15 alle 11:15, esercitazione in aula <a target="_blank" href="https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=9&lang=IT">9.1.2 (EX C.G.3)</a> (Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 9 - Piano Primo)</li></ul>
+	  
+	
+
+			
+			
+				<br><br>
+			
+		
+		
+	
+	
+</div>	
+			</div><noscript><br><br></noscript><div id="sinottico">
+				
+
+
+
+
+
+
+
+
+
+
+
+<div id="orarioSinottico">
+	<div class="solo_stampa">
+		<TABLE  class="BoxInfoCard" style='border-spacing: 0;border-collapse: collapse;'>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 100%" class="ElementInfoCard2 jaf-card-element">
+						<font style="font-weight: bold;">Orario del 1° Semestre  2018/2019</font>
+				</td>
+			</tr>
+		</TABLE>
+
+		<br>
+	</div>
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<TABLE style="cellpadding:0;cellspacing:0;border:none;">
+<tbody>
+<tr>
+<td class="MatriceOccupazioni" width="100%">
+<div id="tableContainer" class="tableContainer">
+	<table  class="scrollTable" style="cellpadding:0;cellspacing:0:table-layout: fixed; width: 100%;">				
+			<tbody class="scrollContent">
+			<tr><td width="8%" class="innerDataDove">Data</td><td width="8%" class="innerDataDove">Dove</td><td class="innerOrario" colspan="2"></td><td class="innerOrario" colspan="4">09:00</td><td class="innerOrario" colspan="4">10:00</td><td class="innerOrario" colspan="4">11:00</td><td class="innerOrario" colspan="4">12:00</td><td class="innerOrario" colspan="4">13:00</td><td class="innerOrario" colspan="4">14:00</td><td class="innerOrario" colspan="4">15:00</td><td class="innerOrario" colspan="4">16:00</td><td class="innerOrario" colspan="4">17:00</td><td class="innerOrario" colspan="4">18:00</td><td class="innerOrario" colspan="4">19:00</td><td class="innerOrario" colspan="4">20:00</td><td class="innerOrario" colspan="2"></td></tr><tr class="riga_vuota"><td colspan="2" class="innerGiorno"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td></tr><tr class="normalRow">
+					<td rowspan="4" class="data"> Lunedì </td><td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 9 - Piano Terra"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=7&lang=IT"> 9.0.1 (EX C.G.1)  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot3" colspan="8">	
+							
+							
+											  
+							 <a title="[lezione] IMAGE ANALYSIS AND COMPUTER VISION (dal 17/09/2018 al 17/12/2018)">
+							 
+							 
+							 
+							 [lezione] IMAGE ANALYSIS AND COMPUTER VISION<br>(dal <i>17/09/2018</i> al <i>17/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="normalRow">
+					<td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 2 - Piano Primo"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=35&lang=IT"> N.1.2  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot4" colspan="8">	
+							
+							
+											  
+							 <a title="[lezione] INGEGNERIA DEL SOFTWARE (dal 17/09/2018 al 17/12/2018)">
+							 
+							 
+							 
+							 [lezione] INGEGNERIA DEL SOFTWARE<br>(dal <i>17/09/2018</i> al <i>17/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="normalRow">
+					<td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 9 - Piano Terra"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=7&lang=IT"> 9.0.1 (EX C.G.1)  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot5" colspan="8">	
+							
+							
+											  
+							 <a title="[lezione] SOFT COMPUTING (dal 17/09/2018 al 17/12/2018)">
+							 
+							 
+							 
+							 [lezione] SOFT COMPUTING<br>(dal <i>17/09/2018</i> al <i>17/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="normalRow">
+					<td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 5 - Piano Terra"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=4739&lang=IT"> 5.03  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot6" colspan="12">	
+							
+							
+											  
+							 <a title="[lezione] ARCHITETTURA DEI CALCOLATORI E SISTEMI OPERATIVI (dal 17/09/2018 al 17/12/2018)">
+							 
+							 
+							 
+							 [lezione] ARCHITETTURA DEI CALCOLATORI E SISTEMI OPERATIVI<br>(dal <i>17/09/2018</i> al <i>17/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="riga_vuota"><td colspan="2" class="innerGiorno"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td></tr><tr class="normalRow">
+					<td rowspan="3" class="data"> Martedì </td><td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 2 - Piano Primo"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=33&lang=IT"> N.0.2  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot2" colspan="8">	
+							
+							
+											  
+							 <a title="[lezione] AUTONOMOUS AGENTS AND MULTIAGENT SYSTEMS (dal 18/09/2018 al 18/12/2018)">
+							 
+							 
+							 
+							 [lezione] AUTONOMOUS AGENTS AND MULTIAGENT SYSTEMS<br>(dal <i>18/09/2018</i> al <i>18/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="normalRow">
+					<td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 3 - Piano Primo"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=45&lang=IT"> S.1.3  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot3" colspan="8">	
+							
+							
+											  
+							 <a title="[lezione] IMAGE ANALYSIS AND COMPUTER VISION (dal 18/09/2018 al 18/12/2018)">
+							 
+							 
+							 
+							 [lezione] IMAGE ANALYSIS AND COMPUTER VISION<br>(dal <i>18/09/2018</i> al <i>18/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="normalRow">
+					<td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Via Golgi 40 - Edificio 25 - Piano Seminterrato"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=943&lang=IT"> D.0.3  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot4" colspan="12">	
+							
+							
+											  
+							 <a title="[esercitazione] INGEGNERIA DEL SOFTWARE (dal 18/09/2018 al 18/12/2018)">
+							 
+							 
+							 
+							 [esercitazione] INGEGNERIA DEL SOFTWARE<br>(dal <i>18/09/2018</i> al <i>18/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="riga_vuota"><td colspan="2" class="innerGiorno"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td></tr><tr class="normalRow">
+					<td rowspan="2" class="data"> Mercoledì </td><td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Via Bonardi - Edificio 14 - Piano Quinto"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=1222&lang=IT"> B.5.3  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot1" colspan="12">	
+							
+							
+											  
+							 <a title="[lezione] ALGEBRA AND MATHEMATICAL LOGIC (dal 19/09/2018 al 19/12/2018)">
+							 
+							 
+							 
+							 [lezione] ALGEBRA AND MATHEMATICAL LOGIC<br>(dal <i>19/09/2018</i> al <i>19/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="normalRow">
+					<td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Via Golgi 20 - Edificio 26 - Piano Primo"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=4606&lang=IT"> L.26.16  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot6" colspan="12">	
+							
+							
+											  
+							 <a title="[lezione] ARCHITETTURA DEI CALCOLATORI E SISTEMI OPERATIVI (dal 19/09/2018 al 19/12/2018)">
+							 
+							 
+							 
+							 [lezione] ARCHITETTURA DEI CALCOLATORI E SISTEMI OPERATIVI<br>(dal <i>19/09/2018</i> al <i>19/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="riga_vuota"><td colspan="2" class="innerGiorno"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td></tr><tr class="normalRow">
+					<td rowspan="2" class="data"> Giovedì </td><td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Via Golgi 40 - Edificio 25 - Piano Terra"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=946&lang=IT"> D.1.2  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot4" colspan="8">	
+							
+							
+											  
+							 <a title="[lezione] INGEGNERIA DEL SOFTWARE (dal 20/09/2018 al 20/12/2018)">
+							 
+							 
+							 
+							 [lezione] INGEGNERIA DEL SOFTWARE<br>(dal <i>20/09/2018</i> al <i>20/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="normalRow">
+					<td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 2 - Piano Terra"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=32&lang=IT"> N.0.1  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot5" colspan="8">	
+							
+							
+											  
+							 <a title="[lezione] SOFT COMPUTING (dal 20/09/2018 al 20/12/2018)">
+							 
+							 
+							 
+							 [lezione] SOFT COMPUTING<br>(dal <i>20/09/2018</i> al <i>20/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="riga_vuota"><td colspan="2" class="innerGiorno"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td></tr><tr class="normalRow">
+					<td rowspan="3" class="data"> Venerdì </td><td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Via Bonardi - Edificio 14 - Piano Quinto"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=1222&lang=IT"> B.5.3  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot1" colspan="12">	
+							
+							
+											  
+							 <a title="[lezione] ALGEBRA AND MATHEMATICAL LOGIC (dal 21/09/2018 al 21/12/2018)">
+							 
+							 
+							 
+							 [lezione] ALGEBRA AND MATHEMATICAL LOGIC<br>(dal <i>21/09/2018</i> al <i>21/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="normalRow">
+					<td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 8 - Piano Terra"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=27&lang=IT"> F.0.1  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot2" colspan="8">	
+							
+							
+											  
+							 <a title="[lezione] AUTONOMOUS AGENTS AND MULTIAGENT SYSTEMS (dal 21/09/2018 al 21/12/2018)">
+							 
+							 
+							 
+							 [lezione] AUTONOMOUS AGENTS AND MULTIAGENT SYSTEMS<br>(dal <i>21/09/2018</i> al <i>21/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="normalRow">
+					<td rowspan="1" class="dove">
+												<a target="_blank"
+												   title ="Milano Città Studi - Piazza Leonardo da Vinci 32 - Edificio 9 - Piano Primo"
+											       href= "https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=343&idaula=9&lang=IT"> 9.1.2 (EX C.G.3)  
+												</a>
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td>
+							
+								<td class="slot slot6" colspan="12">	
+							
+							
+											  
+							 <a title="[esercitazione] ARCHITETTURA DEI CALCOLATORI E SISTEMI OPERATIVI (dal 21/09/2018 al 21/12/2018)">
+							 
+							 
+							 
+							 [esercitazione] ARCHITETTURA DEI CALCOLATORI E SISTEMI OPERATIVI<br>(dal <i>21/09/2018</i> al <i>21/12/2018</i>)</a>
+													  
+							</td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr><tr class="riga_vuota"><td colspan="2" class="innerGiorno"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td><td height="10" class="riferimento_orario_prima"></td><td class="empty"></td><td class="empty"></td><td class="riferimento_orario_ultima"></td></tr><tr class="normalRow">
+					<td rowspan="1" class="data"> Sabato </td><td rowspan="1" class="dove">
+												
+											
+								
+								</td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty_prima"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td><td class="css_prima_riga empty"></td></tr></tbody></table></div></td></tr></tbody></table>		
+	
+	<div class="solo_stampa pagebreak">
+		<br>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form method="post" action="/oralez/oralez/controller/MainDesktop.do?jaf_currentWFID=main&polij_step=0&__pj0=0&__pj1=e4c60a36b8906c8fc8e387cc23c5405a" style="margin:0;">
+	
+	
+	
+	
+	
+	<TABLE  class="BoxInfoCard" style='border-spacing: 0;border-collapse: collapse;'>
+
+		<tr>
+			
+			<td colspan="1" rowspan="1" style="width: 3%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Legenda</b></div>
+			</td>
+			<td colspan="1" rowspan="1" style="width: 39%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Denominazione Insegnamento</b></div>
+			</td>
+			<td colspan="1" rowspan="1" style="width: 25%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Docente</b></div>
+			</td>
+			<td colspan="1" rowspan="1" style="width: 3%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Dal</b></div>
+			</td>
+			<td colspan="1" rowspan="1" style="width: 3%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Al</b></div>
+			</td>
+			<td colspan="1" rowspan="1" style="width: 5%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Anno Accademico di Frequenza</b></div>
+			</td>			
+			<td colspan="1" rowspan="1" style="width: 5%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Posizione insegnamento</b></div>
+			</td>			
+			<td colspan="1" rowspan="1" style="width: 5%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Semestre</b></div>
+			</td>
+			<td colspan="1" rowspan="1" style="width: 5%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Anno di corso</b></div>
+			</td>
+		</tr>
+				
+		
+				
+		
+		
+			<tr>
+				
+				
+					<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 slot1 jaf-card-element"></td>
+					
+					<td colspan="1" rowspan="1" style="width: 39%" class="ElementInfoCard2 jaf-card-element">
+						080931 - ALGEBRA AND MATHEMATICAL LOGIC
+					</td>
+					
+			
+				
+				
+				
+						<td colspan="1" rowspan="1" style="width: 25%" class="ElementInfoCard2 jaf-card-element">
+							
+									
+								
+								 Mauri Luca							
+						</td>						
+				
+				
+					
+					 
+						
+								
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 jaf-card-element">
+								<div style="text-align:center">								
+									19/09/2018
+								</div>
+						</td>
+						
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 jaf-card-element">
+								<div style="text-align:center">
+									21/12/2018
+								</div>
+						</td>
+					
+					
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								2018/2019
+							</div>
+					</td>
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								Obbligo
+							</div>
+					</td>
+				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+					<div style="text-align:center">
+						
+							1
+						
+						
+					</div>
+				</td>				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element"><div style="text-align:center">1</div></td>
+									
+			</tr>
+			
+			
+			
+					
+		  
+					
+				
+		
+				
+		
+		
+			<tr>
+				
+				
+					<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 slot2 jaf-card-element"></td>
+					
+					<td colspan="1" rowspan="1" style="width: 39%" class="ElementInfoCard1 jaf-card-element">
+						089169 - AUTONOMOUS AGENTS AND MULTIAGENT SYSTEMS
+					</td>
+					
+			
+				
+				
+				
+						<td colspan="1" rowspan="1" style="width: 25%" class="ElementInfoCard1 jaf-card-element">
+							
+									
+								
+								 Amigoni Francesco							
+						</td>						
+				
+				
+					
+					 
+						
+								
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 jaf-card-element">
+								<div style="text-align:center">								
+									18/09/2018
+								</div>
+						</td>
+						
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 jaf-card-element">
+								<div style="text-align:center">
+									21/12/2018
+								</div>
+						</td>
+					
+					
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								2018/2019
+							</div>
+					</td>
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								Effettivo
+							</div>
+					</td>
+				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+					<div style="text-align:center">
+						
+							1
+						
+						
+					</div>
+				</td>				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element"><div style="text-align:center">1</div></td>
+									
+			</tr>
+			
+			
+			
+					
+		  
+					
+				
+		
+				
+		
+		
+			<tr>
+				
+				
+					<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 slot3 jaf-card-element"></td>
+					
+					<td colspan="1" rowspan="1" style="width: 39%" class="ElementInfoCard2 jaf-card-element">
+						099993 - IMAGE ANALYSIS AND COMPUTER VISION
+					</td>
+					
+			
+				
+				
+				
+						<td colspan="1" rowspan="1" style="width: 25%" class="ElementInfoCard2 jaf-card-element">
+							
+									
+								
+								 Caglioti Vincenzo							
+						</td>						
+				
+				
+					
+					 
+						
+								
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 jaf-card-element">
+								<div style="text-align:center">								
+									17/09/2018
+								</div>
+						</td>
+						
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 jaf-card-element">
+								<div style="text-align:center">
+									18/12/2018
+								</div>
+						</td>
+					
+					
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								2018/2019
+							</div>
+					</td>
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								Effettivo
+							</div>
+					</td>
+				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+					<div style="text-align:center">
+						
+							1
+						
+						
+					</div>
+				</td>				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element"><div style="text-align:center">1</div></td>
+									
+			</tr>
+			
+			
+			
+					
+		  
+					
+				
+		
+				
+		
+		
+			<tr>
+				
+				
+					<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 slot4 jaf-card-element"></td>
+					
+					<td colspan="1" rowspan="1" style="width: 39%" class="ElementInfoCard1 jaf-card-element">
+						090014 - INGEGNERIA DEL SOFTWARE B
+					</td>
+					
+			
+				
+				
+				
+						<td colspan="1" rowspan="1" style="width: 25%" class="ElementInfoCard1 jaf-card-element">
+							
+									
+								
+								 San Pietro Pierluigi							
+						</td>						
+				
+				
+					
+					 
+						
+								
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 jaf-card-element">
+								<div style="text-align:center">								
+									17/09/2018
+								</div>
+						</td>
+						
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 jaf-card-element">
+								<div style="text-align:center">
+									20/12/2018
+								</div>
+						</td>
+					
+					
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								2018/2019
+							</div>
+					</td>
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								Obbligo
+							</div>
+					</td>
+				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+					<div style="text-align:center">
+						
+							1
+						
+						
+					</div>
+				</td>				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element"><div style="text-align:center">1</div></td>
+									
+			</tr>
+			
+			
+			
+					
+		  
+					
+				
+		
+				
+		
+		
+			<tr>
+				
+				
+					<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 slot5 jaf-card-element"></td>
+					
+					<td colspan="1" rowspan="1" style="width: 39%" class="ElementInfoCard2 jaf-card-element">
+						052536 - SOFT COMPUTING
+					</td>
+					
+			
+				
+				
+				
+						<td colspan="1" rowspan="1" style="width: 25%" class="ElementInfoCard2 jaf-card-element">
+							
+									
+								
+								 Bonarini Andrea							
+						</td>						
+				
+				
+					
+					 
+						
+								
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 jaf-card-element">
+								<div style="text-align:center">								
+									17/09/2018
+								</div>
+						</td>
+						
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 jaf-card-element">
+								<div style="text-align:center">
+									20/12/2018
+								</div>
+						</td>
+					
+					
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								2018/2019
+							</div>
+					</td>
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								Soprannumero
+							</div>
+					</td>
+				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+					<div style="text-align:center">
+						
+							1
+						
+						
+					</div>
+				</td>				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element"><div style="text-align:center">1</div></td>
+									
+			</tr>
+			
+			
+			
+					
+		  
+					
+				
+		
+				
+		
+		
+			<tr>
+				
+				
+					<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 slot6 jaf-card-element"></td>
+					
+					<td colspan="1" rowspan="1" style="width: 39%" class="ElementInfoCard1 jaf-card-element">
+						052294 - ARCHITETTURA DEI CALCOLATORI E SISTEMI OPERATIVI MODULO 2
+					</td>
+					
+			
+				
+				
+				
+						<td colspan="1" rowspan="1" style="width: 25%" class="ElementInfoCard1 jaf-card-element">
+							
+									
+								
+								 Breveglieri Luca Oddone							
+						</td>						
+				
+				
+					
+					 
+						
+								
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 jaf-card-element">
+								<div style="text-align:center">								
+									17/09/2018
+								</div>
+						</td>
+						
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 jaf-card-element">
+								<div style="text-align:center">
+									21/12/2018
+								</div>
+						</td>
+					
+					
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								2018/2019
+							</div>
+					</td>
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								Obbligo
+							</div>
+					</td>
+				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+					<div style="text-align:center">
+						
+							1
+						
+						
+					</div>
+				</td>				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element"><div style="text-align:center">2</div></td>
+									
+			</tr>
+			
+			
+			
+					
+		  
+					
+				
+		
+		
+		
+		
+		
+		
+	</TABLE>
+
+	
+ 
+	
+	
+	
+	<input type="hidden" name="tab_selected" value="2">
+	<input type="hidden" name="semestre" value="1">
+	
+		<input type="hidden" name="lang" value="IT">
+	
+	
+</form>
+
+	</div>
+	
+</div>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form method="post" action="/oralez/oralez/controller/MainDesktop.do?jaf_currentWFID=main&polij_step=0&__pj0=0&__pj1=e4c60a36b8906c8fc8e387cc23c5405a" style="margin:0;">
+	
+	
+	<TABLE  class="BoxInfoCard SimpleCardOut" style='border-spacing: 0;border-collapse: collapse;'>
+
+		<tr>
+			<td colspan="1" rowspan="1" style="width: 100%" class="ElementSimpleCard1 jaf-card-element">
+				Insegnamenti non ancora sostenuti per il 1° semestre 2018/2019 presenti nel Piano di Studio dello studente			
+			</td>	
+		</tr>
+	</TABLE>
+
+	
+	
+	
+	
+	<TABLE  class="BoxInfoCard" style='border-spacing: 0;border-collapse: collapse;'>
+
+		<tr>
+			
+				<td colspan="1" rowspan="1" style="width: 5%" class="HeadColumn1 min-head jaf-card-element">
+						<div style="text-align:center"><b>Visualizza l'orario</b></div>
+				</td>
+			
+			<td colspan="1" rowspan="1" style="width: 3%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Legenda</b></div>
+			</td>
+			<td colspan="1" rowspan="1" style="width: 34%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Denominazione Insegnamento</b></div>
+			</td>
+			<td colspan="1" rowspan="1" style="width: 25%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Docente</b></div>
+			</td>
+			<td colspan="1" rowspan="1" style="width: 3%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Dal</b></div>
+			</td>
+			<td colspan="1" rowspan="1" style="width: 3%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Al</b></div>
+			</td>
+			<td colspan="1" rowspan="1" style="width: 5%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Anno Accademico di Frequenza</b></div>
+			</td>			
+			<td colspan="1" rowspan="1" style="width: 5%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Posizione insegnamento</b></div>
+			</td>			
+			<td colspan="1" rowspan="1" style="width: 5%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Semestre</b></div>
+			</td>
+			<td colspan="1" rowspan="1" style="width: 5%" class="HeadColumn1 min-head jaf-card-element">
+					<div style="text-align:center"><b>Anno di corso</b></div>
+			</td>
+		</tr>
+				
+		
+				
+		
+		
+			<tr>
+				
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								<input type="checkbox" 
+										name="c_insegn_piano" CHECKED="CHECKED" 
+										value="080931"/></div> 
+					</td>
+				
+				
+					<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 slot1 jaf-card-element"></td>
+					
+					<td colspan="1" rowspan="1" style="width: 34%" class="ElementInfoCard2 jaf-card-element">
+						080931 - ALGEBRA AND MATHEMATICAL LOGIC
+					</td>
+					
+			
+				
+				
+				
+						<td colspan="1" rowspan="1" style="width: 25%" class="ElementInfoCard2 jaf-card-element">
+							
+									
+								
+								 Mauri Luca							
+						</td>						
+				
+				
+					
+					 
+						
+								
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 jaf-card-element">
+								<div style="text-align:center">								
+									19/09/2018
+								</div>
+						</td>
+						
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 jaf-card-element">
+								<div style="text-align:center">
+									21/12/2018
+								</div>
+						</td>
+					
+					
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								2018/2019
+							</div>
+					</td>
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								Obbligo
+							</div>
+					</td>
+				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+					<div style="text-align:center">
+						
+							1
+						
+						
+					</div>
+				</td>				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element"><div style="text-align:center">1</div></td>
+									
+			</tr>
+			
+			
+			
+					
+		  
+					
+				
+		
+				
+		
+		
+			<tr>
+				
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								<input type="checkbox" 
+										name="c_insegn_piano" CHECKED="CHECKED" 
+										value="089169"/></div> 
+					</td>
+				
+				
+					<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 slot2 jaf-card-element"></td>
+					
+					<td colspan="1" rowspan="1" style="width: 34%" class="ElementInfoCard1 jaf-card-element">
+						089169 - AUTONOMOUS AGENTS AND MULTIAGENT SYSTEMS
+					</td>
+					
+			
+				
+				
+				
+						<td colspan="1" rowspan="1" style="width: 25%" class="ElementInfoCard1 jaf-card-element">
+							
+									
+								
+								 Amigoni Francesco							
+						</td>						
+				
+				
+					
+					 
+						
+								
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 jaf-card-element">
+								<div style="text-align:center">								
+									18/09/2018
+								</div>
+						</td>
+						
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 jaf-card-element">
+								<div style="text-align:center">
+									21/12/2018
+								</div>
+						</td>
+					
+					
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								2018/2019
+							</div>
+					</td>
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								Effettivo
+							</div>
+					</td>
+				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+					<div style="text-align:center">
+						
+							1
+						
+						
+					</div>
+				</td>				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element"><div style="text-align:center">1</div></td>
+									
+			</tr>
+			
+			
+			
+					
+		  
+					
+				
+		
+				
+		
+		
+			<tr>
+				
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								<input type="checkbox" 
+										name="c_insegn_piano" CHECKED="CHECKED" 
+										value="099993"/></div> 
+					</td>
+				
+				
+					<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 slot3 jaf-card-element"></td>
+					
+					<td colspan="1" rowspan="1" style="width: 34%" class="ElementInfoCard2 jaf-card-element">
+						099993 - IMAGE ANALYSIS AND COMPUTER VISION
+					</td>
+					
+			
+				
+				
+				
+						<td colspan="1" rowspan="1" style="width: 25%" class="ElementInfoCard2 jaf-card-element">
+							
+									
+								
+								 Caglioti Vincenzo							
+						</td>						
+				
+				
+					
+					 
+						
+								
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 jaf-card-element">
+								<div style="text-align:center">								
+									17/09/2018
+								</div>
+						</td>
+						
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 jaf-card-element">
+								<div style="text-align:center">
+									18/12/2018
+								</div>
+						</td>
+					
+					
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								2018/2019
+							</div>
+					</td>
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								Effettivo
+							</div>
+					</td>
+				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+					<div style="text-align:center">
+						
+							1
+						
+						
+					</div>
+				</td>				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element"><div style="text-align:center">1</div></td>
+									
+			</tr>
+			
+			
+			
+					
+		  
+					
+				
+		
+				
+		
+		
+			<tr>
+				
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								<input type="checkbox" 
+										name="c_insegn_piano" CHECKED="CHECKED" 
+										value="090014"/></div> 
+					</td>
+				
+				
+					<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 slot4 jaf-card-element"></td>
+					
+					<td colspan="1" rowspan="1" style="width: 34%" class="ElementInfoCard1 jaf-card-element">
+						090014 - INGEGNERIA DEL SOFTWARE B
+					</td>
+					
+			
+				
+				
+				
+						<td colspan="1" rowspan="1" style="width: 25%" class="ElementInfoCard1 jaf-card-element">
+							
+									
+								
+								 San Pietro Pierluigi							
+						</td>						
+				
+				
+					
+					 
+						
+								
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 jaf-card-element">
+								<div style="text-align:center">								
+									17/09/2018
+								</div>
+						</td>
+						
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 jaf-card-element">
+								<div style="text-align:center">
+									20/12/2018
+								</div>
+						</td>
+					
+					
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								2018/2019
+							</div>
+					</td>
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								Obbligo
+							</div>
+					</td>
+				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+					<div style="text-align:center">
+						
+							1
+						
+						
+					</div>
+				</td>				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element"><div style="text-align:center">1</div></td>
+									
+			</tr>
+			
+			
+			
+					
+		  
+					
+				
+		
+				
+		
+		
+			<tr>
+				
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								<input type="checkbox" 
+										name="c_insegn_piano" CHECKED="CHECKED" 
+										value="052536"/></div> 
+					</td>
+				
+				
+					<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 slot5 jaf-card-element"></td>
+					
+					<td colspan="1" rowspan="1" style="width: 34%" class="ElementInfoCard2 jaf-card-element">
+						052536 - SOFT COMPUTING
+					</td>
+					
+			
+				
+				
+				
+						<td colspan="1" rowspan="1" style="width: 25%" class="ElementInfoCard2 jaf-card-element">
+							
+									
+								
+								 Bonarini Andrea							
+						</td>						
+				
+				
+					
+					 
+						
+								
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 jaf-card-element">
+								<div style="text-align:center">								
+									17/09/2018
+								</div>
+						</td>
+						
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard2 jaf-card-element">
+								<div style="text-align:center">
+									20/12/2018
+								</div>
+						</td>
+					
+					
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								2018/2019
+							</div>
+					</td>
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+							<div style="text-align:center">
+								Soprannumero
+							</div>
+					</td>
+				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element">
+					<div style="text-align:center">
+						
+							1
+						
+						
+					</div>
+				</td>				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard2 jaf-card-element"><div style="text-align:center">1</div></td>
+									
+			</tr>
+			
+			
+			
+					
+		  
+					
+				
+		
+				
+		
+		
+			<tr>
+				
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								<input type="checkbox" 
+										name="c_insegn_piano" CHECKED="CHECKED" 
+										value="052294"/></div> 
+					</td>
+				
+				
+					<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 slot6 jaf-card-element"></td>
+					
+					<td colspan="1" rowspan="1" style="width: 34%" class="ElementInfoCard1 jaf-card-element">
+						052294 - ARCHITETTURA DEI CALCOLATORI E SISTEMI OPERATIVI MODULO 2
+					</td>
+					
+			
+				
+				
+				
+						<td colspan="1" rowspan="1" style="width: 25%" class="ElementInfoCard1 jaf-card-element">
+							
+									
+								
+								 Breveglieri Luca Oddone							
+						</td>						
+				
+				
+					
+					 
+						
+								
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 jaf-card-element">
+								<div style="text-align:center">								
+									17/09/2018
+								</div>
+						</td>
+						
+						<td colspan="1" rowspan="1" style="width: 3%" class="ElementInfoCard1 jaf-card-element">
+								<div style="text-align:center">
+									21/12/2018
+								</div>
+						</td>
+					
+					
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								2018/2019
+							</div>
+					</td>
+					
+					<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+							<div style="text-align:center">
+								Obbligo
+							</div>
+					</td>
+				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element">
+					<div style="text-align:center">
+						
+							1
+						
+						
+					</div>
+				</td>				
+				<td colspan="1" rowspan="1" style="width: 5%" class="ElementInfoCard1 jaf-card-element"><div style="text-align:center">2</div></td>
+									
+			</tr>
+			
+			
+			
+					
+		  
+					
+				
+		
+		
+		
+		
+		
+		
+	</TABLE>
+
+	
+ 
+	
+	
+		<input type="hidden" name="postato" value="true">
+		<TABLE  class="BoxInfoCard SimpleCardOut" style='border-spacing: 0;border-collapse: collapse;'>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 100%" class="ElementSimpleCard2 jaf-card-element"><input id="sbmtOrario" type="submit" value="Ricalcola orario" name="evn_default"></td>
+			</tr>
+		</TABLE>
+
+	
+	
+	<input type="hidden" name="tab_selected" value="2">
+	<input type="hidden" name="semestre" value="1">
+	
+		<input type="hidden" name="lang" value="IT">
+	
+	
+</form>
+
+
+			</div><noscript><br><br></noscript></div>
+<SCRIPT type="text/javascript">
+	$(document).ready(function () {
+		$('#tab6403').tabs({
+				selected: 1,
+				active: 1,
+				dummy: 0});
+		jaf_tabsactivate('tab6403');
+	});
+</SCRIPT>
+
+						
+			
+	
+	
+
+
+					</div>
+				</td></tr></table>
+
+
+    
+		
+		
+		
+	
+
+
+<table class="polifooter">
+	<tfoot class="tfoot-tablePage">
+    	<tr>
+    		<td >
+    			<div class="jaf-text-align-left">
+	   				 Orario delle lezioni v. 2.0.5 / 2.0.5
+	   			</div>
+    		</td>
+    		<td>
+    			<div class="jaf-text-align-center">
+					Area Servizi ICT
+    			</div>
+    		</td>
+    		<td>
+    			<div class="jaf-text-align-right" id="div-tfoot-tablePage-centerBar">
+    				
+    			</div>
+    		</td>
+	   	</tr>
+    </tfoot>
+</table>
+
+		</div>
+		
+
+
+<script type="text/javascript" src="/oralez/assets/js/jquery.PrintArea.js?__load_ts=1539799679502"></script>
+<script type="text/javascript" src="/oralez/assets/js/desktop.js?__load_ts=1539799679502"></script>
+
+	</body>
+</html>
